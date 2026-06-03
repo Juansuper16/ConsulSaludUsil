@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --sky: #0EA5E9;
+  --sky-dark: #0284C7;
+  --sky-light: #E0F2FE;
+  --emerald: #10B981;
+  --amber: #F59E0B;
+  --red: #EF4444;
+  --bg: #F8FAFC;
+  --text: #0F172A;
+  --muted: #64748B;
+  --border: #E2E8F0;
+  --card: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+
+.btn-primary {
+  background: var(--sky);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.15s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.btn-primary:hover { background: var(--sky-dark); transform: translateY(-1px); }
+
+.btn-secondary {
+  background: white;
+  color: var(--sky);
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  border: 1.5px solid var(--sky);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.15s;
+}
+.btn-secondary:hover { background: var(--sky-light); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-critica { background: #FEE2E2; color: #B91C1C; }
+.badge-alta    { background: #FEF3C7; color: #B45309; }
+.badge-media   { background: #DBEAFE; color: #1D4ED8; }
+.badge-baja    { background: #DCFCE7; color: #15803D; }
+.badge-success { background: #DCFCE7; color: #15803D; }
+.badge-pending { background: #FEF3C7; color: #B45309; }
+.badge-cancel  { background: #FEE2E2; color: #B91C1C; }
+
+input, select, textarea {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.875rem;
+  font-size: 0.875rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  background: white;
+  color: var(--text);
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--sky);
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.12);
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
